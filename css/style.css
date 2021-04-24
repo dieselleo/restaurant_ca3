@@ -13,22 +13,8 @@ body, html {
 .header {
   background-color: white;
   padding: 10px 30px 10px 30px;
+  margin-top: 15px;
   height: 60px;
-  position: relative;
-}
-
-.top-left {
-  float: left;
-  display: block;
-  position: relative;
-  top: 10px;
-}
-
-.top-right {
-  float: right;
-  display: block;
-  position: relative;
-  top: 10px;
 }
 
 .header a {
@@ -46,14 +32,31 @@ body, html {
   color: gray;
 }
 
+.footer {
+  background-color: rgb(33, 33, 33);
+  padding: 10px 30px 10px 30px;
+  height: 100px;
+}
+
+.footer h1 {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-size: 15px;
+  font-weight: bold;
+}
+
 .btn {
     border: rounded;
     color: white;
     padding: 14px 28px;
     cursor: pointer;
-  }
+}
 
-  .card {
+.card {
     height: 50%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
@@ -65,6 +68,46 @@ body, html {
   
   .container {
     max-width: 100%;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+  .wrap {
+    flex-wrap: wrap;
+  }
+
+  .row {
+    flex-direction: row;
+  }
+
+  .column {
+    flex-direction: column;
+  }
+
+  .flex-start {
+    justify-content: flex-start;
+  }
+  
+  .flex-end {
+    justify-content: flex-end;
+  }
+  
+  .center {
+    justify-content: center;
+  }
+  
+  .space-between {
+    justify-content: space-between;
+  }
+  
+  .space-around {
+    justify-content: space-around;
+  }
+
+  .baseline {
+    align-items: baseline;
   }
 
   .mySlides {display: none; 

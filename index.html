@@ -8,15 +8,19 @@
 
 <body>
     <div class="header">
-        <div class="top-left">
-            <a href="#home">Home</a>
-            <a href="orders.html">Order</a>
-            <a href="#customers">Customers</a>
+        <div class="container flex space-between">
+            <div class="container flex">
+                <a href="#home">Home</a>
+                <a href="orders.html">Order</a>
+                <a href="#customers">Customers</a>
+            </div>
+            <div class="container flex">
+                <a href="#home">Test</a>
+            </div>
         </div>
     </div>
     <div class="slideshow-container">
 
-        <!-- Full-width images with number and caption text -->
         <div class="mySlides" style="background-image: url('/img/food1.jpg')">
         </div>
       
@@ -26,7 +30,6 @@
         <div class="mySlides" style="background-image: url('/img/food3.jpg')">
         </div>
       
-        <!-- Next and previous buttons -->
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
@@ -34,11 +37,13 @@
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
-          </div>
-      </div>
-    <div class="container-red">
-        <h1 class="h1">Test</h1>
+        </div>
     </div>
-</body>
+    <div class="footer">
+        <div class="container flex flex-end">
+            <h1>test</h1>
+        </div>
+    </div>
+    </body>
 
 </html>
