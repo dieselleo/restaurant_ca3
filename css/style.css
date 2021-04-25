@@ -23,9 +23,8 @@ body, html {
   text-decoration: none;
   padding-left: 10px;
   padding-right: 10px;
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   font-size: 15px;
-  font-weight: bold;
 }
 
 .header a:hover {
@@ -54,6 +53,14 @@ body, html {
     color: white;
     padding: 14px 28px;
     cursor: pointer;
+}
+
+#ttt {
+  color: rgb(33, 33, 33);
+  text-decoration: solid;
+  padding: 5% 45% 5% 10%;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 13px;
 }
 
 .card {
