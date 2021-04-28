@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <script async src="scripts.js"></script>
+</head>
+
+<body onload="getCustomers()">
+    <div class="header">
+        <div class="container flex-start" style="height: 40px;">
+            <div class="container">
+                <a href="index.html">Home</a>
+                <a href="orders.html">Order</a>
+                <a href="#costumers">Customers</a>
+            </div>
+            <div class="container flex-end">
+                <a href="#home">Test</a>
+            </div>
+        </div>
+    </div>
+    <div class="container row-wrap center" style="margin-left: 10px; margin-right: 10px; min-height: 500px;">
+        <div class="card" style="background-color: red;">
+            <div id="img-card" class="img-container">
+                <img src="img/avatar_default.png" alt="">
+            </div>
+            <div class="data-container column" style="background-color: blue;">
+                <h1 id="name">${customers.results.name.first}</h1><br>
+                <h2 id="add1">${customers.location.street}</h2>
+                <h2 id="add2">${customers.location.city}</h2>
+                <h2 id="phone">${customers.phone}</h2>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container flex flex-end">
+            <h1>test</h1>
+        </div>
+    </div>
+    </body>
+
+</html>

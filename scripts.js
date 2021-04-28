@@ -1,5 +1,5 @@
 var slideIndex = 1;
-showSlides(slideIndex);
+showSlides(slideIndex)
 
 function plusSlides(n) {
   showSlides(slideIndex += n);
@@ -24,3 +24,17 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
 }
+
+function getCustomers(){
+  let output = '<h2>Users</h2>'
+  fetch('https://randomuser.me/api/?results=5')
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data);
+    data.forEach(function(user){
+      output += `<h1>test</h1>`;
+    })
+  },
+  document.getElementById('customers').innerHTML = output
+  )
+  }

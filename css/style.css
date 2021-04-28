@@ -8,13 +8,15 @@
 body, html {
     background-color: white;
     -webkit-font-smoothing: antialiased;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
   background-color: white;
   padding: 10px 30px 10px 30px;
   margin-top: 15px;
-  height: 60px;
 }
 
 .header a {
@@ -35,6 +37,7 @@ body, html {
   background-color: rgb(33, 33, 33);
   padding: 10px 30px 10px 30px;
   height: 100px;
+  flex-shrink: 0;
 }
 
 .footer h1 {
@@ -64,17 +67,41 @@ body, html {
 }
 
 .card {
-    height: 50%;
+    width: 500px;
+    height: 180px;
+    margin: 10px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
+    display: flex;
   }
   
   .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+  }
+
+  .img-container {
+    max-width: 150px;
+    max-height: 150px;
+    margin: 0 auto;
+    display: flex;
+    flex: 1 0 auto;
+    padding: 15px 5px 0px 5px;
+  }
+
+  .data-container {
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex: 1 0 auto;
+    padding: 15px 5px 0px 15px;
   }
   
   .container {
     max-width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex: 1 0 auto;
   }
 
   .flex {
@@ -117,8 +144,13 @@ body, html {
     align-items: baseline;
   }
 
-  .mySlides {display: none; 
-    height: 100%; 
+  .row-wrap {
+    flex-flow: row wrap;
+  }
+
+  .mySlides {
+    display: flex; 
+    height: 800px; 
     width: 100%; 
     background-position: center;
     background-repeat: no-repeat;
@@ -126,7 +158,7 @@ body, html {
   }
   
   .slideshow-container {
-    height: calc(100vh - 60px);
+    height: 1000px;
     max-width: 100%;
     position: relative;
     margin: 0px;
