@@ -3,7 +3,16 @@
 
 <head>
     <link rel="stylesheet" href="css/style.css">
-    <script async src="scripts.js"></script>
+    <script async src="js/orders.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                i = $(this).val();
+                $("#food-menu-"+i).toggle();
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -19,13 +28,74 @@
             </div>
         </div>
     </div>
-    <div class="container flex center">
-        <div class="container flex row" style="width: 100%;">
-            <div class="container column" style="background-color: red; width: 50%;">
-                <h1>test</h1>
+    <div class="container column">
+        <div class="container" style="background-color: rgb(33, 33, 33); color: white;">
+            <div class="container column center" style="padding: 5px 10px 5px 10px;">
+                <button value="1" class="btn-bar"><strong>Starters</strong></button>
+                <div id="food-menu-1" class="container column center" style="background-color: white; color: black;">
+                    <h1>Dish option number 1 - bla bla bla bla bla bla</h1>
+                    <h1>Dish option number 1 - bla bla bla bla bla bla</h1>
+                    <h1>Dish option number 1 - bla bla bla bla bla bla</h1>
+                </div>
+                <button value="2" class="btn-bar"><strong>Mains</strong></button>
+                <div id="food-menu-2" class="container column" style="display:none;"></div>
+                <button value="3" class="btn-bar"><strong>Desserts</strong></button>
+                <div id="food-menu-3" class="container column" style="display:none;"></div>
+                <button value="4" class="btn-bar"><strong>Drinks</strong></button>
+                <div id="food-menu-4" class="container column" style="display:none;"></div>
             </div>
-            <div class="container column" style="background-color: black;color: white; width: 50%">
-                <h1>test2</h1>
+        </div>
+        <div class="container column" style="color: rgb(33, 33, 33); padding: 10px;">
+            <div class="container column">
+                <div class="container">
+                    <h1>Sub-Totals</h1>
+                </div>
+                <div class="container">
+                    <h3>Starters</h3>
+                    <div id="cost-price" class="container column flex-end">
+                        <h4 id="cost">Cost: €0.00</h4>                        
+                        <h4 id="price">Price: €0.00</h4>
+                    </div>
+                </div>
+                <div class="container">
+                    <h3>Mains</h3>
+                    <div id="cost-price" class="container column flex-end">
+                        <h4 id="cost">Cost: €0.00</h4>                        
+                        <h4 id="price">Price: €0.00</h4>
+                    </div>
+                </div>
+                <div class="container">
+                    <h3>Desserts</h3>
+                    <div id="cost-price" class="container column flex-end">
+                        <h4 id="cost">Cost: €0.00</h4>                        
+                        <h4 id="price">Price: €0.00</h4>
+                    </div>
+                </div>
+                <div class="container">
+                    <h3>Drinks</h3>
+                    <div id="cost-price" class="container column flex-end">
+                        <h4 id="cost">Cost: €0.00</h4>                        
+                        <h4 id="price">Price: €0.00</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="container column">
+                <div class="container" style="max-height: 29%;">
+                    <h1>Totals</h1>
+                </div>
+                <div class="container row">
+                    <div class="container column">
+                        <h3>Cost Comparison</h3>
+                        <div class="container column flex-end">
+                            <h4 id="cost-veg">Cost Vegetarian: €0.00</h4>                        
+                            <h4 id="cost-nveg">Cost Non-Vegetarian: €0.00</h4>
+                        </div>
+                    </div>
+                    <div class="container column flex-end">
+                        <h2 id="cost">Total Cost: €0.00</h2>                        
+                        <h2 id="price">Total Price: €0.00</h2>                        
+                    </div>
+                </div>
             </div>
         </div>
     </div>
