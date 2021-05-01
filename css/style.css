@@ -64,6 +64,7 @@ body, html {
   border: 1px solid rgb(33, 33, 33);
   border-radius: 4px;
   text-align: left;
+  text-decoration: solid;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 16px;
 }
@@ -74,7 +75,87 @@ body, html {
 }
 
 #food-menu-1 {
+  display: none;
+  background-color: white; 
+  color: black;
+  padding: 0 10px 0 10px;
   margin: 0px 3px 0px 3px;
+}
+
+#food-menu-1 p{
+  padding: 0 0 0 10px;
+  text-decoration: solid;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 15px;
+}
+
+#food-menu-1 h4{
+  padding: 2px 0 0 0;
+  text-decoration: solid;
+  font-family:'Courier New', Courier, monospace;
+}
+
+#food-menu-2 {
+  display: none;
+  background-color: white; 
+  color: black;
+  padding: 0 10px 0 10px;
+  margin: 0px 3px 0px 3px;
+}
+
+#food-menu-2 p{
+  padding: 0 0 0 10px;
+  text-decoration: solid;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 15px;
+}
+
+#food-menu-2 h4{
+  padding: 2px 0 0 0;
+  text-decoration: solid;
+  font-family:'Courier New', Courier, monospace;
+}
+
+#food-menu-3 {
+  display: none;
+  background-color: white; 
+  color: black;
+  padding: 0 10px 0 10px;
+  margin: 0px 3px 0px 3px;
+}
+
+#food-menu-3 p{
+  padding: 0 0 0 10px;
+  text-decoration: solid;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 15px;
+}
+
+#food-menu-3 h4{
+  padding: 2px 0 0 0;
+  text-decoration: solid;
+  font-family:'Courier New', Courier, monospace;
+}
+
+#food-menu-4 {
+  display: none;
+  background-color: white; 
+  color: black;
+  padding: 0 10px 0 10px;
+  margin: 0px 3px 0px 3px;
+}
+
+#food-menu-4 p{
+  padding: 0 0 0 10px;
+  text-decoration: solid;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 15px;
+}
+
+#food-menu-4 h4{
+  padding: 2px 0 0 0;
+  text-decoration: solid;
+  font-family:'Courier New', Courier, monospace;
 }
 
 #ttt {
