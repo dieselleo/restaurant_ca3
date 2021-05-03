@@ -1,20 +1,28 @@
 function getCustomers() {
-  var output = "<h1>test1</h1>"
-  fetch('https://randomuser.me/api/?results=5')
+  var output = ''
+  fetch('https://randomuser.me/api/?results=10')
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
-      (data.results).forEach(user => {
-        Object.entries(user).forEach(function(){
-          console.log("foi")
-          output = `<div class="data-container column" style="background-color: blue;">
-          <h1 id="name">${name.first}</h1><br>
-          <h2 id="add1">${location.street}</h2>
-          <h2 id="add2">${location.city}</h2></div>`
-          $(document).ready(function (){
-            document.getElementById("customers").innerHTML = output
-          })
-        })        
+      data.results.forEach(user => {
+        output += `<div class="card column-wrap">
+        <div class="column flex center">
+          <img src="${user.picture.medium}" style="margin: 0 10px 0 10px; border-radius: 50%">
+        </div>
+        <div class="column flex center" style="width: 100%; margin: 0 10px 0 20px">
+        <h1>${user.name.title} ${user.name.last}, ${user.name.first}</h1><br>
+        <h2>${capFirstLetter(user.gender)}, ${user.dob.age}</h2>
+        <h2>${user.location.city}, ${user.location.state}</h2>
+        <h2>${user.location.country}</h2>
+        </div>
+    </div>`
+      })
+      $(document).ready(function () {
+        document.getElementById("customers").innerHTML = output
       })
     });
+}
+
+function capFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
 }
