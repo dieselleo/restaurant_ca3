@@ -1,12 +1,13 @@
 {
-    "starters": [
+    "results": [
       {
         "name": "Crab and ricotta parcels",
         "description": "Thin filo pastry cases stuffed with crab and ricotta",
         "price": "7.85",
         "cost": "3.30",
         "vegetarian": "F",
-        "ingredients": "flour | water | salt | onions | crab | ricotta"
+        "ingredients": "flour | water | salt | onions | crab | ricotta",
+		"menu": "starters"
       },
       {
         "name": "Chicken and tofu gyoza",
@@ -14,7 +15,8 @@
         "price": "6.95",
         "cost": "2.80",
         "vegetarian": "F",
-        "ingredients": "flour | water | salt | onions | chicken | tofu"
+        "ingredients": "flour | water | salt | onions | chicken | tofu",
+		"menu": "starters"
       },
       {
         "name": "Salmon and pepper maki",
@@ -22,7 +24,8 @@
         "price": "10.35",
         "cost": "5.25",
         "vegetarian": "F",
-        "ingredients": "rice | rice vinegar | sugar | salmon | pepper"
+        "ingredients": "rice | rice vinegar | sugar | salmon | pepper",
+		"menu": "starters"
       },
       {
         "name": "Ricotta and squash parcels",
@@ -30,17 +33,17 @@
         "price": "6.55",
         "cost": "2.45",
         "vegetarian": "T",
-        "ingredients": "flour | water | salt | onions | ricotta | squash"
-      }
-    ],
-    "mains": [
-      {
+        "ingredients": "flour | water | salt | onions | ricotta | squash",
+		"menu": "starters"
+      },
+	  {
         "name": "Beef and anise vindaloo",
         "description": "Hot vindaloo made with beef and fresh anise",
         "price": "15.40",
         "cost": "7.50",
         "vegetarian": "F",
-        "ingredients": "onion | peppers | garlic | ginger | tumeric | cumin | coriander | black pepper | mustard seeds | cardamon | cinnamon | white wine vinegar | cayenne | beef | anise"
+        "ingredients": "onion | peppers | garlic | ginger | tumeric | cumin | coriander | black pepper | mustard seeds | cardamon | cinnamon | white wine vinegar | cayenne | beef | anise",
+		"menu": "mains"
       },
       {
         "name": "Chorizo and mushroom pasta",
@@ -48,7 +51,8 @@
         "price": "12.30",
         "cost": "5.95",
         "vegetarian": "F",
-        "ingredients": "tomato | onion | garlic | pasta | oregano | black pepper | chorizo | mushroom"
+        "ingredients": "tomato | onion | garlic | pasta | oregano | black pepper | chorizo | mushroom",
+		"menu": "mains"
       },
       {
         "name": "Steak and parsnip casserole",
@@ -56,7 +60,8 @@
         "price": "14.35",
         "cost": "7.10",
         "vegetarian": "F",
-        "ingredients": "onion | salt | black pepper | potatoes | steak | parsnip"
+        "ingredients": "onion | salt | black pepper | potatoes | steak | parsnip",
+		"menu": "mains"
       },
       {
         "name": "Peppercorn and avocado spaghetti",
@@ -64,50 +69,54 @@
         "price": "11.50",
         "cost": "4.80",
         "vegetarian": "T",
-        "ingredients": "tomato | passata | onion | garlic | spagetti | oregano | black pepper | peppercorn | avocado"
-      }
-    ],
-    "desserts": [
-      {
+        "ingredients": "tomato | passata | onion | garlic | spagetti | oregano | black pepper | peppercorn | avocado",
+		"menu": "mains"
+      },
+	  {
         "name": "Banana and chocolate muffins",
         "description": "Home-made crumbly muffins made with fresh banana and milk chocolate",
         "price": "4.30",
         "cost": "1.80",
-        "ingredients": "flour | butter | egg | sugar | banana | chocolate"
+        "ingredients": "flour | butter | egg | sugar | banana | chocolate",
+		"menu": "desserts"
       },
       {
         "name": "Vanilla and milk chocolate cheesecake",
         "description": "A rich cheesecake layered with vanilla and milk chocolate",
         "price": "5.10",
         "cost": "2.05",
-        "ingredients": "flour | butter | water | sugar | vanilla | double cream | cream cheese | milk chocolate"
+        "ingredients": "flour | butter | water | sugar | vanilla | double cream | cream cheese | milk chocolate",
+		"menu": "desserts"
       },
       {
         "name": "Strawberry and banana cookies",
         "description": "Crunchy cookies made with fresh strawberries and banana",
         "price": "4.65",
         "cost": "1.55",
-        "ingredients": "flour | butter | egg | sugar | strawberry | banana"
-      }
-    ],
-    "drinks": [
-      {
+        "ingredients": "flour | butter | egg | sugar | strawberry | banana",
+		"menu": "desserts"
+      },
+	  {
         "name": "Coke",
         "description": "Coke",
         "price": "2.10",
-        "cost": "0.95"
+        "cost": "0.95",
+		"menu": "drinks"
       },
       {
         "name": "Diet Coke",
         "description": "Diet Coke",
         "price": "2.10",
-        "cost": "0.90"
+        "cost": "0.90",
+		"menu": "drinks"
       },
       {
         "name": "Guinness",
         "description": "Guinness",
         "price": "4.80",
-        "cost": "2.30"
+        "cost": "2.30",
+		"menu": "drinks"
       }
+	  
     ]
   }
