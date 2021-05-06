@@ -8,6 +8,13 @@ function clickBtnBar() {
     });
 }
 
+
+function dispVeg () {
+    $(document).ready(function(){
+        $(document.querySelectorAll("#veg")).css("display","flex")
+    })
+}
+
 function getProducts() {
     let opStarters = opMains = opDess = opDrinks = ''
     fetch('../products.json')
@@ -17,18 +24,30 @@ function getProducts() {
             (data.results).forEach(prod => {
                 if (prod.menu == "drinks") {
                     opDrinks += `<div class="column prod-card">
-                    <div class="container row space-between">
-                    <h4>${prod.name}</h4><h4>€ ${prod.price}</h4>
-                    <input type="number" name="qtd" id="qtd">
+                    <div class="container row row-wrap space-between">
+                    <div class="container row">
+                    <h4>${prod.name}</h4>
+                    <h4>€ ${prod.price}</h4>
+                    </div>
+                    <input id="qtd" type="number" value="0" 
+                    data-name="${prod.name}" data-price="${prod.price}" data-cost="${prod.cost}">
                     </div>
                     <br>
-                    <p><strong>${prod.description}</strong></p>
                     </div>`
                 } else {
+                    if (prod.vegetarian==`true`){
+                        veg = `<div id="veg"><h2>V</h2></div>`
+                    } else {
+                        veg = ``
+                    }
                     el = `<div class="column prod-card">
-                    <div class="container row space-between">
-                    <h4>${prod.name}</h4><h4>€ ${prod.price}</h4>
-                    <input type="number" name="qtd" id="qtd">
+                    <div class="container row row-wrap space-between">
+                    <h4>${prod.name}</h4>
+                    <h4>€ ${prod.price}</h4>
+                    ${veg}
+                    <input id="qtd" type="number" value="0" 
+                    data-name="${prod.name}" data-price="${prod.price}" data-cost="${prod.cost}" 
+                    data-veg="${prod.vegetarian}">
                     </div>
                     <br>
                     <p><strong>${prod.description}</strong></p>

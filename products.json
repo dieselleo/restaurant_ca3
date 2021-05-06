@@ -5,7 +5,7 @@
         "description": "Thin filo pastry cases stuffed with crab and ricotta",
         "price": "7.85",
         "cost": "3.30",
-        "vegetarian": "F",
+        "vegetarian": "false",
         "ingredients": "flour | water | salt | onions | crab | ricotta",
 		"menu": "starters"
       },
@@ -14,7 +14,7 @@
         "description": "Thin pastry cases stuffed with corn-fed chicken and smoked tofu",
         "price": "6.95",
         "cost": "2.80",
-        "vegetarian": "F",
+        "vegetarian": "false",
         "ingredients": "flour | water | salt | onions | chicken | tofu",
 		"menu": "starters"
       },
@@ -23,7 +23,7 @@
         "description": "Toasted seaweed wrapped around sushi rice, filled with smoked salmon and yellow pepper",
         "price": "10.35",
         "cost": "5.25",
-        "vegetarian": "F",
+        "vegetarian": "false",
         "ingredients": "rice | rice vinegar | sugar | salmon | pepper",
 		"menu": "starters"
       },
@@ -32,7 +32,7 @@
         "description": "Thin filo pastry cases stuffed with ricotta and pattypan squash",
         "price": "6.55",
         "cost": "2.45",
-        "vegetarian": "T",
+        "vegetarian": "true",
         "ingredients": "flour | water | salt | onions | ricotta | squash",
 		"menu": "starters"
       },
@@ -41,7 +41,7 @@
         "description": "Hot vindaloo made with beef and fresh anise",
         "price": "15.40",
         "cost": "7.50",
-        "vegetarian": "F",
+        "vegetarian": "false",
         "ingredients": "onion | peppers | garlic | ginger | tumeric | cumin | coriander | black pepper | mustard seeds | cardamon | cinnamon | white wine vinegar | cayenne | beef | anise",
 		"menu": "mains"
       },
@@ -50,7 +50,7 @@
         "description": "Fresh egg pasta in a sauce made from Spanish chorizo and hand-picked mushroom",
         "price": "12.30",
         "cost": "5.95",
-        "vegetarian": "F",
+        "vegetarian": "false",
         "ingredients": "tomato | onion | garlic | pasta | oregano | black pepper | chorizo | mushroom",
 		"menu": "mains"
       },
@@ -59,7 +59,7 @@
         "description": "Steak and fresh parsnips stewed",
         "price": "14.35",
         "cost": "7.10",
-        "vegetarian": "F",
+        "vegetarian": "false",
         "ingredients": "onion | salt | black pepper | potatoes | steak | parsnip",
 		"menu": "mains"
       },
@@ -68,7 +68,7 @@
         "description": "Spagetti topped with a blend of green peppercorn and fresh avocado",
         "price": "11.50",
         "cost": "4.80",
-        "vegetarian": "T",
+        "vegetarian": "true",
         "ingredients": "tomato | passata | onion | garlic | spagetti | oregano | black pepper | peppercorn | avocado",
 		"menu": "mains"
       },
