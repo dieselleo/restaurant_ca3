@@ -68,10 +68,6 @@ body, html {
   font-size: 18px;
 }
 
-#prod {
-  max-width: 500px;
-}
-
 .food-menu {
   display: none;
   max-width: 95%;
@@ -104,6 +100,7 @@ body, html {
 }
 
 .prod-card {
+  display: flex;
   width: 500px;
   padding: 20px 10px 20px 10px;
   margin: 5px 5px 5px 5px;
@@ -123,6 +120,10 @@ body, html {
   border-color: green;
   border-radius: 50%;
   border-style: solid;
+}
+
+#qtd {
+  margin-left: 20px;
 }
 
 

@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/orders.js"></script>
     <script>
-        $(function(){clickBtnBar(); getProducts(); dispVeg()});
-    </script>
-</head>
-
+        $(function(){clickBtnBar(); getProducts(); dispVeg()})        
+    </script>  
 <body>
     <div class="header">
         <div class="container flex-start" style="height: 40px;">
@@ -70,32 +68,36 @@
                 <div class="container">
                     <h3>Starters</h3>
                     <div id="cost-price" class="container column flex-end">
-                        <h4 id="cost">Cost: €0.00</h4>
-                        <h4 id="price">Price: €0.00</h4>
+                        <h4 id="st-starters-cost">Cost €0.00</h4>
+                        <h4 id="st-starters-price">Price €0.00</h4>
                     </div>
                 </div>
+                <hr>
                 <div class="container">
                     <h3>Mains</h3>
                     <div id="cost-price" class="container column flex-end">
-                        <h4 id="cost">Cost: €0.00</h4>
-                        <h4 id="price">Price: €0.00</h4>
+                        <h4 id="st-mains-cost">Cost €0.00</h4>
+                        <h4 id="st-mains-price">Price €0.00</h4>
                     </div>
                 </div>
+                <hr>
                 <div class="container">
                     <h3>Desserts</h3>
                     <div id="cost-price" class="container column flex-end">
-                        <h4 id="cost">Cost: €0.00</h4>
-                        <h4 id="price">Price: €0.00</h4>
+                        <h4 id="st-desserts-cost">Cost €0.00</h4>
+                        <h4 id="st-desserts-price">Price €0.00</h4>
                     </div>
                 </div>
+                <hr>
                 <div class="container">
                     <h3>Drinks</h3>
                     <div id="cost-price" class="container column flex-end">
-                        <h4 id="cost">Cost: €0.00</h4>
-                        <h4 id="price">Price: €0.00</h4>
+                        <h4 id="st-drinks-cost">Cost €0.00</h4>
+                        <h4 id="st-drinks-price">Price €0.00</h4>
                     </div>
                 </div>
             </div>
+            <hr>
             <div class="container column">
                 <div class="container" style="max-height: 29%;">
                     <h1>Totals</h1>
@@ -104,13 +106,13 @@
                     <div class="container column">
                         <h3>Cost Comparison</h3>
                         <div class="container column flex-end">
-                            <h4 id="cost-veg">Cost Vegetarian: €0.00</h4>
-                            <h4 id="cost-nveg">Cost Non-Vegetarian: €0.00</h4>
+                            <h4 id="cost-veg">Cost Vegetarian €0.00</h4>
+                            <h4 id="cost-nveg">Cost Non-Vegetarian €0.00</h4>
                         </div>
                     </div>
                     <div class="container column flex-end">
-                        <h2 id="cost">Total Cost: €0.00</h2>
-                        <h2 id="price">Total Price: €0.00</h2>
+                        <h2 id="tot-cost">Total Cost €0.00</h2>
+                        <h2 id="tot-price">Total Price €0.00</h2>
                     </div>
                 </div>
             </div>
@@ -120,7 +122,7 @@
         <div class="container flex flex-end">
             <h1>test</h1>
         </div>
-    </div>
+    </div>  
 </body>
 
 </html>
