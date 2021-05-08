@@ -6,7 +6,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/orders.js"></script>
     <script>
-        $(function(){clickBtnBar(); getProducts(); dispVeg()})        
+        $(function(){clickBtnBar(); getProducts()})        
     </script>  
 <body>
     <div class="header">
@@ -42,21 +42,16 @@
         <div class="container column" style="color: rgb(33, 33, 33); padding: 10px 10px 20px 10px;">
             <div class="container column">
                 <h1>Order Descriptor</h1><br>
-                <div class="container column">
-                    <h4>Starters</h4>
+                <div class="container row row-wrap">
+                    <div id="descr-starters" class="container column">
+                    </div>
+                    <div id="descr-mains" class="container column">
+                    </div>
+                    <div id="descr-dess" class="container column">
+                    </div>
+                    <div id="descr-drinks"class="container column">
+                    </div>
                 </div>
-                <div class="container column">
-                    <h4>Mains</h4>
-                </div>
-                <div class="container column">
-                    <h4>Desserts</h4>
-                </div>
-                <div class="container column">
-                    <h4>Drinks</h4>
-                </div>
-            </div>
-            <div class="container row-wrap">
-
             </div>
         </div>
         <hr>
