@@ -22,9 +22,9 @@ function getProducts() {
                     <h4>${prod.name}</h4>
                     <h4>€ ${prod.price}</h4>
                     </div>
-                    <input id="qtd" type="number" value="0" 
+                    <input id="qtd" type="number" value="0" min="0" max="99"
                     data-name="${prod.name}" data-price="${prod.price}" data-cost="${prod.cost}"
-                    data-menu="${prod.menu}">
+                    data-menu="${prod.menu}" style="width: 40px">
                     </div>
                     <br>
                     </div>`
@@ -41,7 +41,7 @@ function getProducts() {
                     <h4>€ ${prod.price}</h4>
                     ${veg}
                     </div>
-                    <input id="qtd" type="number" value="0"
+                    <input id="qtd" type="number" value="0" min="0" max="9"
                     data-name="${prod.name}" data-price="${prod.price}" data-cost="${prod.cost}" 
                     data-veg="${prod.vegetarian}" data-menu="${prod.menu}">
                     </div>
@@ -74,8 +74,6 @@ function getProducts() {
             })
         })
 }
-
-
 
 function calcStarters() {
     startersPrice = startersCost = 0
@@ -156,47 +154,60 @@ function calcTotals() {
 }
 
 function refrshScreen() {
-    calcDrinks(); 
-    calcDesserts(); 
-    calcMains(); 
-    calcStarters(); 
-    calcTotals(); 
+    calcDrinks();
+    calcDesserts();
+    calcMains();
+    calcStarters();
+    calcTotals();
     buildOrder();
-    test()
 }
 
 function buildOrder() {
-    descrStarters = `<h3>Starters</h3>`
-    descrMains = `<h3>Mains</h3>`
-    descrDess =  `<h3>Desserts</h3>`
-    descrDrinks = `<h3>Drinks</h3>`
+    descrStarters = `<h3>Starters</h3><hr>`
+    descrMains = `<h3>Mains</h3><hr>`
+    descrDess = `<h3>Desserts</h3><hr>`
+    descrDrinks = `<h3>Drinks</h3><hr>`
     $(document.body).ready(function () {
         el = document.querySelectorAll("input")
         el.forEach(prod => {
             if (prod.value > 0) {
                 switch (prod.getAttribute("data-menu")) {
                     case "starters":
-                        descrStarters += `<h4>${prod.value} X ${prod.getAttribute("data-name")}</h4>`
+                        descrStarters += `<h4>${prod.value} x ${prod.getAttribute("data-name")}</h4><hr>`
                         break;
                     case "mains":
-                        descrMains += `<h4>${prod.value} X ${prod.getAttribute("data-name")}</h4>`
+                        descrMains += `<h4>${prod.value} x ${prod.getAttribute("data-name")}</h4><hr>`
                         break;
                     case "desserts":
-                        descrDess += `<h4>${prod.value} X ${prod.getAttribute("data-name")}</h4>`
+                        descrDess += `<h4>${prod.value} x ${prod.getAttribute("data-name")}</h4><hr>`
                         break;
                     case "drinks":
-                        descrDrinks += `<h4>${prod.value} X ${prod.getAttribute("data-name")}</h4>`
+                        descrDrinks += `<h4>${prod.value} x ${prod.getAttribute("data-name")}</h4><hr>`
                         break;
                     default:
                 }
             }
-            
+
         })
         document.getElementById("descr-starters").innerHTML = descrStarters
         document.getElementById("descr-mains").innerHTML = descrMains
         document.getElementById("descr-dess").innerHTML = descrDess
         document.getElementById("descr-drinks").innerHTML = descrDrinks
-    })   
+    })
+    $(document).ready(function () {
+        $(`[id^="descr-"]`).each(function (i) {
+            menu = this
+            qtd = $(`#${$(this).prop("id")} > *`).length
+            console.log(menu)
+            console.log(qtd)
+            if (qtd > 2) {
+                $(menu).css("display", "flex")
+            } else {
+                $(menu).css("display", "none")
+            }
+
+        })
+    })
 }
 
 function capFirstLetter(string) {

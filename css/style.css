@@ -3,6 +3,7 @@
   padding: 0;
   outline: 0;
   box-sizing: border-box;
+  font-family:'Courier New', Courier, monospace;
 }
 
 body, html {
@@ -11,6 +12,11 @@ body, html {
     height: 100%;
     display: flex;
     flex-direction: column;
+}
+
+hr {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .header {
@@ -80,7 +86,6 @@ body, html {
 .food-menu p{
   padding: 0 0 0 10px;
   text-decoration: solid;
-  font-family:'Courier New', Courier, monospace;
   font-size: 15px;
 }
 
@@ -88,7 +93,6 @@ body, html {
   min-width: 68px;
   padding: 2px 10px 0 0;
   text-decoration: solid;
-  font-family:'Courier New', Courier, monospace;
 }
 
 .food-menu input {
@@ -131,12 +135,34 @@ body, html {
   color: rgb(33, 33, 33);
   text-decoration: solid;
   padding: 5% 45% 5% 10%;
-  font-family:'Courier New', Courier, monospace;
   font-size: 13px;
 }
 
 #descr-starters, #descr-mains, #descr-dess, #descr-drinks {
-  display: flex;
+  display: none;
+  text-align: center;
+  width: 500px;
+  margin-bottom: 5px;
+}
+
+#descr-starters hr {
+  opacity: 0.2;
+}
+
+#descr-mains hr {
+  opacity: 0.2;
+} 
+
+#descr-dess hr {
+  opacity: 0.2;
+}
+
+#descr-drinks hr {
+  opacity: 0.2;
+}
+
+#stotal {
+  width: 500px;
 }
 
 .card {
