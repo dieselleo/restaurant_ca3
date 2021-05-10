@@ -17,27 +17,27 @@
                 <a href="customers.html">Customers</a>
             </div>
             <div class="container flex-end">
-                <button onclick="document.getElementById('modal').style.display='block'">Test</button>
+                <button id="login" onclick="openLogin()"><img id="login" src="/img/login.png"></img></button>
+            </div>
+        </div>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="container column">
+                <form id="pass-box">
+                    <div class="container row flex-end"><button id="close">x</button></div>
+                    <h1>Please enter your password to validate</h1>
+                    <input type="password" placeholder="Password" name="pass" id="pass">
+                    <div class="container center" id="msg"></div>
+                </form>
+                <div>
+                    <button class="pass-btn" id="validate" onclick="btnClick(event)">Validate</button>
+                    <button class="pass-btn" id="cancel" onclick="btnClick(event)">Cancel</button>
+                </div>
             </div>
         </div>
     </div>
     <div class="slideshow-container">
-        <div id="modal" class="modal">
-            <div class="modal-content">
-                <div class="container column">
-                    <form  id="pass-box">
-                        <div class="container row flex-end"><button class="close">x</button></div>
-                        <h1>Please enter your password to validate</h1>
-                        <input type="password" placeholder="Password" name="pass" id="pass">
-                        <div class="container center" id="msg"></div>
-                    </form>
-                    <div>
-                        <button class="pass-btn" id="validate" onclick="btnClick(event)">Validate</button>
-                        <button class="pass-btn" id="cancel" onclick="btnClick(event)">Cancel</button>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="mySlides" style="background-image: url('/img/food1.jpg')">
         </div>
 
@@ -50,23 +50,47 @@
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-        <div style="text-align:center; margin-top: -30px; height: 0px;">
+        <div style="text-align:center; margin-top: -30px; margin-bottom: 30px; height: 0px;">
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
         </div>
     </div>
     <div class="container flex">
-        <div id="ttt" class="container">
-            <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque vero suscipit recusandae dignissimos at
-                provident distinctio illum fugiat totam cupiditate culpa magni veniam quam fugit quia explicabo ab, non
-                ducimus.</h1>
+        <div id="content" class="container">
+            <h1>Diesel's is now open and delightful for having you. For a long period our staff was working hard to have
+                the best outcome for you to enjoy our meals. After a lot of reasearch our cheff's came to a diverse menu
+                to please all sorts of tastes, from starters to desserts, for vegetarian and non-vegetarians. Have a
+                look on our simple but delicious menu, place an order and be our next satisfected costumer!</h1>
         </div>
     </div>
     <div class="footer">
-        <div class="container flex flex-end">
-            <h1>test</h1>
+        <div class="container row center">
+            <h1>Diesel's Restaurant</h1>
         </div>
+        <div class="container row center row-wrap">
+            <div class="column" style="margin: 0px 40px 0px 40px;">
+                <div id="foot-cont" class="row center">
+                    <h2>Timetable</h2>
+                </div>
+                <div id="foot-cont" class="column">
+                    <h5>Mon - Fri: 10:00 - 15:30/15:00 - 11:30</h5>
+                    <h5>Sat/Sun/Bank Holidays: 10:00 - 1:00</h5>
+                </div>
+            </div>
+            <div class="column" style="margin: 0px 40px 0px 40px;">
+                <div id="foot-cont" class="row center">
+                    <h2>Info</h2>
+                </div>
+                <div id="foot-cont" class="column">
+                    <h5>Phone: (01) 633 3444</h5>
+                    <h5>Address: 30-34 Westmoreland St, Dublin 2, D02 HK35</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container row center" style="background-color: rgb(44, 44, 44); padding: 0; margin: 0; max-height: 15px;">
+        <h6><i>Copyright: Leonardo Diesel</i></h6>
     </div>
 </body>
 

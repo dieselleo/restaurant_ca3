@@ -5,6 +5,7 @@
 </head>
 <script type="text/javascript" src="js/orders.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script async src="js/password.js"></script>
 <script>
     $(function () { clickBtn(); getProducts()})
 </script>
@@ -17,7 +18,23 @@
                 <a href="customers.html">Customers</a>
             </div>
             <div class="container flex-end">
-                <a href="#home">Test</a>
+                <button id="login" onclick="openLogin()"><img id="login" src="/img/login.png"></img></button>
+            </div>
+        </div>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="container column">
+                <form id="pass-box">
+                    <div class="container row flex-end"><button id="close">x</button></div>
+                    <h1>Please enter your password to validate</h1>
+                    <input type="password" placeholder="Password" name="pass" id="pass">
+                    <div class="container center" id="msg"></div>
+                </form>
+                <div>
+                    <button class="pass-btn" id="validate" onclick="btnClick(event)">Validate</button>
+                    <button class="pass-btn" id="cancel" onclick="btnClick(event)">Cancel</button>
+                </div>
             </div>
         </div>
     </div>
@@ -115,9 +132,32 @@
 
     </div>
     <div class="footer">
-        <div class="container flex flex-end">
-            <h1>test</h1>
+        <div class="container row center">
+            <h1>Diesel's Restaurant</h1>
+        </div>        
+        <div class="container row center row-wrap">
+            <div class="column" style="margin: 0px 40px 0px 40px;">
+                <div id="foot-cont" class="row center">
+                    <h2>Timetable</h2>
+                </div>
+                <div id="foot-cont" class="column">
+                    <h5>Mon - Fri: 10:00 - 15:30/15:00 - 11:30</h5>
+                    <h5>Sat/Sun/Bank Holidays: 10:00 - 1:00</h5>
+                </div>
+            </div>
+            <div class="column" style="margin: 0px 40px 0px 40px;">
+                <div id="foot-cont" class="row center">
+                    <h2>Info</h2>
+                </div>
+                <div id="foot-cont" class="column">
+                    <h5>Phone: (01) 633 3444</h5>
+                    <h5>Address: 30-34 Westmoreland St, Dublin 2, D02 HK35</h5>
+                </div>
+            </div>
         </div>
     </div>
+    <div class="container row center" style="background-color: rgb(44, 44, 44); padding: 0; margin: 0; max-height: 15px;">
+        <h6><i>Copyright: Leonardo Diesel</i></h6>
+    </div> 
 </body>
 </html>

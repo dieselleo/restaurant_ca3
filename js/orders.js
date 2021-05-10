@@ -65,7 +65,7 @@ function getProducts() {
                     </div>`
                 } else {
                     if (prod.vegetarian == `true`) {
-                        veg = `<div id="veg"><h2>V</h2></div>`
+                        veg = `<img id="veg" src="img/veg.png">`
                     } else {
                         veg = ``
                     }

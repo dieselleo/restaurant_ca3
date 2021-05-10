@@ -1,4 +1,12 @@
-var modal = document.getElementById('modal');
+var modal = document.getElementById("modal");
+
+$('form input').keydown(function (e) {
+    if (e.keyCode == 13) {
+        el = $("#validate")
+        btnClick(el)
+        return false;
+    }
+});
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (e) {
@@ -7,14 +15,22 @@ window.onclick = function (e) {
     }
 }
 
+function openLogin () {
+    modal.style.display='block'
+    $("#pass").val("")
+    msg.style.display = "none"
+}
+
 function btnClick(e) {
-    regex = /leonardo/g
     regex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/g
     msg = document.getElementById('msg');
     pass = $("#pass").val()
     el = e.target
-    btn = $(el).prop("id")
-    console.log(pass.match(regex))
+    if (el == undefined) {
+        btn = $(e).prop("id")
+    } else {
+        btn = $(el).prop("id")
+    }
     if (btn == "validate") {
         if (pass.match(regex) == pass) {
             $(document).ready(function(){
@@ -30,8 +46,6 @@ function btnClick(e) {
             })
         }
     } else if (btn == "cancel") {
-        $("#pass").val("")
-        msg.style.display = "none"
         modal.style.display = "none";
     }
 }
