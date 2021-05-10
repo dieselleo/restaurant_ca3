@@ -58,8 +58,14 @@ hr {
 }
 
 .btn {
-    color: white;
-    padding: 14px 28px;
+  background-color: rgb(33, 33, 33); 
+  color: white;
+  padding: 14px 28px;
+  border: 1px solid white;
+  border-radius: 4px;
+  text-align: left;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
 }
 
 .btn-bar {
@@ -161,8 +167,20 @@ hr {
   opacity: 0.2;
 }
 
-#stotal {
-  width: 500px;
+#cost-price {
+  text-align: end;
+  padding-right: 10px;
+}
+
+#total {
+  margin: 10px;
+  height: 50px;
+}
+
+#order {
+  text-align: center;
+  width: 200px;
+  height: 60px;
 }
 
 .card {
@@ -200,6 +218,12 @@ hr {
   
   .container {
     max-width: 100%;
+    margin: 0;
+    display: flex;
+    flex: 1 0 auto;
+  }
+
+  .tot-container {
     margin: 0;
     display: flex;
     flex: 1 0 auto;
@@ -247,15 +271,6 @@ hr {
 
   .row-wrap {
     flex-flow: row wrap;
-  }
-
-  #cost-price {
-    text-align: end;
-    padding-right: 10px;
-  }
-
-  #subtotals {
-    padding: 10px;
   }
 
 

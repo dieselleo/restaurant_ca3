@@ -1,11 +1,26 @@
-function clickBtnBar() {
-    $("button").click(function () {
-        el = $(this).prop("name")
-        $(`#${el}`).ready(
-            $(`#${el}`).toggle("slow"),
-            $(`#${el}`).css("display", "flex")
-        )
+function clickBtn() {
+    $("button").each(function () {
+        if ($(this).attr("id") == "btn-bar") {
+            $(this).click(function () {
+                el = $(this).prop("name")
+                $(`#${el}`).ready(
+                    $(`#${el}`).toggle("slow"),
+                    $(`#${el}`).css("display", "flex")
+                )
+            })
+        }
     });
+}
+
+function placeOrder() {
+    $(document).ready(function(){
+        alert("Thank you! Your order has been placed!")
+        $("input").val("0")
+        $(".food-menu").each(function(){
+            $(this).css("display", "none")
+        })
+    })
+    refrshScreen();
 }
 
 function getProducts() {
@@ -147,8 +162,8 @@ function calcTotals() {
         document.getElementById("st-drinks-cost").innerHTML = "Cost €" + parseFloat(drinksCost).toFixed(2)
         document.getElementById("tot-cost").innerHTML = "Total Cost €" + parseFloat(totCost).toFixed(2)
         document.getElementById("tot-price").innerHTML = "Total Price €" + parseFloat(totPrice).toFixed(2)
-        document.getElementById("cost-veg").innerHTML = "Cost Vegetarian €" + parseFloat(totVegCost).toFixed(2)
-        document.getElementById("cost-nveg").innerHTML = "Cost Non-Vegetarian €" + parseFloat(totNVegCost).toFixed(2)
+        document.getElementById("cost-veg").innerHTML = "Vegetarian €" + parseFloat(totVegCost).toFixed(2)
+        document.getElementById("cost-nveg").innerHTML = "Non-Vegetarian €" + parseFloat(totNVegCost).toFixed(2)
     })
 
 }
@@ -198,8 +213,6 @@ function buildOrder() {
         $(`[id^="descr-"]`).each(function (i) {
             menu = this
             qtd = $(`#${$(this).prop("id")} > *`).length
-            console.log(menu)
-            console.log(qtd)
             if (qtd > 2) {
                 $(menu).css("display", "flex")
             } else {
