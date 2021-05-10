@@ -3,7 +3,9 @@
 
 <head>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script async src="js/slide_show.js"></script>
+    <script async src="js/password.js"></script>
 </head>
 
 <body>
@@ -15,21 +17,36 @@
                 <a href="customers.html">Customers</a>
             </div>
             <div class="container flex-end">
-                <a href="#home">Test</a>
+                <button onclick="document.getElementById('modal').style.display='block'">Test</button>
             </div>
         </div>
     </div>
     <div class="slideshow-container">
-
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <div class="container column">
+                    <form  id="pass-box">
+                        <div class="container row flex-end"><button class="close">x</button></div>
+                        <h1>Please enter your password to validate</h1>
+                        <input type="password" placeholder="Password" name="pass" id="pass">
+                        <div class="container center" id="msg"></div>
+                    </form>
+                    <div>
+                        <button class="pass-btn" id="validate" onclick="btnClick(event)">Validate</button>
+                        <button class="pass-btn" id="cancel" onclick="btnClick(event)">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="mySlides" style="background-image: url('/img/food1.jpg')">
         </div>
-      
+
         <div class="mySlides" style="background-image: url('/img/food2.jpg')">
         </div>
-      
+
         <div class="mySlides" style="background-image: url('/img/food3.jpg')">
         </div>
-      
+
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
@@ -41,7 +58,9 @@
     </div>
     <div class="container flex">
         <div id="ttt" class="container">
-            <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque vero suscipit recusandae dignissimos at provident distinctio illum fugiat totam cupiditate culpa magni veniam quam fugit quia explicabo ab, non ducimus.</h1>
+            <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque vero suscipit recusandae dignissimos at
+                provident distinctio illum fugiat totam cupiditate culpa magni veniam quam fugit quia explicabo ab, non
+                ducimus.</h1>
         </div>
     </div>
     <div class="footer">
@@ -49,6 +68,6 @@
             <h1>test</h1>
         </div>
     </div>
-    </body>
+</body>
 
 </html>

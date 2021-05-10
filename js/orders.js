@@ -1,3 +1,21 @@
+function preventNegative(e) {
+    var inputKeyCode = e.keyCode ? e.keyCode : e.which;
+    if (inputKeyCode != null) {
+        if (inputKeyCode == 45) e.preventDefault();
+    }
+}
+
+function preventMax (e) {
+    el = e.target
+    console.log(el)
+    max = parseInt($(el).prop("max"))
+    val = parseInt($(el).val())
+    if (val > max) {
+        alert(`You cannot order more than ${max} of the selected product`);
+        el = $(el).val("0")
+    } 
+}
+
 function clickBtn() {
     $("button").each(function () {
         if ($(this).attr("id") == "btn-bar") {
@@ -13,10 +31,10 @@ function clickBtn() {
 }
 
 function placeOrder() {
-    $(document).ready(function(){
+    $(document).ready(function () {
         alert("Thank you! Your order has been placed!")
         $("input").val("0")
-        $(".food-menu").each(function(){
+        $(".food-menu").each(function () {
             $(this).css("display", "none")
         })
     })
@@ -39,7 +57,9 @@ function getProducts() {
                     </div>
                     <input id="qtd" type="number" value="0" min="0" max="99"
                     data-name="${prod.name}" data-price="${prod.price}" data-cost="${prod.cost}"
-                    data-menu="${prod.menu}" style="width: 40px">
+                    data-menu="${prod.menu}" 
+                    onkeypress="preventNegative(event)" onkeyup="preventMax(event)" onclick="this.select()"
+                    style="width: 40px">
                     </div>
                     <br>
                     </div>`
@@ -58,7 +78,8 @@ function getProducts() {
                     </div>
                     <input id="qtd" type="number" value="0" min="0" max="9"
                     data-name="${prod.name}" data-price="${prod.price}" data-cost="${prod.cost}" 
-                    data-veg="${prod.vegetarian}" data-menu="${prod.menu}">
+                    data-veg="${prod.vegetarian}" data-menu="${prod.menu}" 
+                    onkeypress="preventNegative(event)" onkeyup="preventMax(event)" onclick="this.select()"> 
                     </div>
                     <br>
                     <p><strong>${prod.description}</strong></p>
@@ -188,16 +209,16 @@ function buildOrder() {
             if (prod.value > 0) {
                 switch (prod.getAttribute("data-menu")) {
                     case "starters":
-                        descrStarters += `<h4>${prod.value} x ${prod.getAttribute("data-name")}</h4><hr>`
+                        descrStarters += `<h4>${parseInt(prod.value)} x ${prod.getAttribute("data-name")}</h4><hr>`
                         break;
                     case "mains":
-                        descrMains += `<h4>${prod.value} x ${prod.getAttribute("data-name")}</h4><hr>`
+                        descrMains += `<h4>${parseInt(prod.value)} x ${prod.getAttribute("data-name")}</h4><hr>`
                         break;
                     case "desserts":
-                        descrDess += `<h4>${prod.value} x ${prod.getAttribute("data-name")}</h4><hr>`
+                        descrDess += `<h4>${parseInt(prod.value)} x ${prod.getAttribute("data-name")}</h4><hr>`
                         break;
                     case "drinks":
-                        descrDrinks += `<h4>${prod.value} x ${prod.getAttribute("data-name")}</h4><hr>`
+                        descrDrinks += `<h4>${parseInt(prod.value)} x ${prod.getAttribute("data-name")}</h4><hr>`
                         break;
                     default:
                 }
